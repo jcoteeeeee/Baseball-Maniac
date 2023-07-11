@@ -9,11 +9,16 @@
   --logo-font-family: Brush Script MT, Brush Script Std, cursive; 
   --main-blue: rgb(0, 0, 255); 
   --main-red: rgb(255, 0, 0); 
+  --cream-white: rgb(237, 225, 213); 
+  --powder-blue: rgb(197, 231, 246); 
 }
 
 header{
   display: flex; 
   justify-content: center; 
+  background-color: var(--powder-blue); 
+  border-bottom: 8px double var(--main-red);  
+  padding: 10px; 
 } 
 
 #logo{  
@@ -21,4 +26,5 @@ header{
   font-size: var(--logo-font-size); 
   color: var(--main-blue); 
   filter: drop-shadow(2px 1px var(--main-red)); 
+  /* text-decoration:  underline  */
 } 
