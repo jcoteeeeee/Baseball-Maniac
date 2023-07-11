@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
     return(
-        <header>
+        <header id='header'>
             <div>
-                <h1>Baseball Maniac</h1>
+                <h1 id='logo'>Baseball Maniac</h1>
             </div> 
             <div>
 

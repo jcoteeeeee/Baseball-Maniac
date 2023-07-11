@@ -3,3 +3,22 @@
   padding: 0; 
   box-sizing: border-box; 
 } 
+
+:root{
+  --logo-font-size: 70px; 
+  --logo-font-family: Brush Script MT, Brush Script Std, cursive; 
+  --main-blue: rgb(0, 0, 255); 
+  --main-red: rgb(255, 0, 0); 
+}
+
+header{
+  display: flex; 
+  justify-content: center; 
+} 
+
+#logo{  
+  font-family: var(--logo-font-family); 
+  font-size: var(--logo-font-size); 
+  color: var(--main-blue); 
+  filter: drop-shadow(2px 1px var(--main-red)); 
+} 
