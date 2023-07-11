@@ -3,10 +3,10 @@ import React from 'react'
 const Header = () => {
     return(
         <header id='header'>
-            <div>
+            <div> 
                 <h1 id='logo'>Baseball Maniac</h1>
             </div> 
-        </header>
+        </header> 
     )
 }  
 

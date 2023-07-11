@@ -5,19 +5,25 @@
 } 
 
 :root{
-  --logo-font-size: 70px; 
-  --logo-font-family: Brush Script MT, Brush Script Std, cursive; 
   --main-blue: rgb(0, 0, 255); 
   --main-red: rgb(255, 0, 0); 
+  --main-white: rgb(255, 255, 255); 
   --cream-white: rgb(237, 225, 213); 
   --powder-blue: rgb(197, 231, 246); 
-}
+
+  --logo-font-size: 70px; 
+  --logo-font-family: Brush Script MT, Brush Script Std, cursive; 
+  --slogan-font-family: DejaVu Sans Mono, monospace; 
+  --slogan-font-size: 30px; 
+} 
+
+/* Header */ 
 
 header{
   display: flex; 
   justify-content: center; 
   background-color: var(--powder-blue); 
-  border-bottom: 8px double var(--main-red);  
+  border-bottom: 2px solid var(--main-red);  
   padding: 10px; 
 } 
 
@@ -28,3 +34,27 @@ header{
   filter: drop-shadow(2px 1px var(--main-red)); 
   /* text-decoration:  underline  */
 } 
+
+/* Homepage */ 
+#homepage-container{
+  display: flex; 
+  flex-direction: column; 
+}  
+
+#home-main{  
+  width: 100%; 
+  height: 500px; 
+  background-image: url('https://www.desmoinesregister.com/gcdn/presto/2021/08/11/PDEM/7eaedea9-2ce3-496e-a33e-f35c1158e6fb-FieldofDreams1.jpg?crop=5422,3050,x0,y268&width=660&height=372&format=pjpg&auto=webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex; 
+  justify-content: center;  
+  align-items: center;
+} 
+
+#slogan{
+  font-family: var(--slogan-font-family); 
+  color: var(--main-white); 
+  font-size: var(--slogan-font-size)   
+}
