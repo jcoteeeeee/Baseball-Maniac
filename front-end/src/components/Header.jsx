@@ -6,9 +6,6 @@ const Header = () => {
             <div>
                 <h1 id='logo'>Baseball Maniac</h1>
             </div> 
-            <div>
-
-            </div>
         </header>
     )
 }  
