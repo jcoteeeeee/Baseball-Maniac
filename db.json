@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "user-info": 
+                {
+                    "name": "fake person", 
+                    "username": "fake_person", 
+                    "email": "fakeemail@email.com", 
+                    "password": "fakepassword", 
+                    "fav_team": "Baseball Team" 
+                }, 
+
+            "user-games": 
+                {
+                    "date": null, 
+                    "result": "Win", 
+                    "score": "1-0", 
+                    "opponent": "Fake Team", 
+                    "location": "Fake Stadium", 
+                    "starting_pitcher": "Fake Pitcher", 
+                    "note": ""
+                }
+        }
+    ]
+}
