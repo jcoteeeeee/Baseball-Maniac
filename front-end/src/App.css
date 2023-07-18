@@ -44,10 +44,10 @@ header{
 #home-main{  
   width: 100%; 
   height: 500px; 
-  background-image: url('https://www.desmoinesregister.com/gcdn/presto/2021/08/11/PDEM/7eaedea9-2ce3-496e-a33e-f35c1158e6fb-FieldofDreams1.jpg?crop=5422,3050,x0,y268&width=660&height=372&format=pjpg&auto=webp'); 
+  /* background-image: url('https://www.desmoinesregister.com/gcdn/presto/2021/08/11/PDEM/7eaedea9-2ce3-496e-a33e-f35c1158e6fb-FieldofDreams1.jpg?crop=5422,3050,x0,y268&width=660&height=372&format=pjpg&auto=webp'); 
   background-size: cover; 
   background-position: center; 
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;   */
   display: flex; 
   justify-content: center;  
   align-items: center;
