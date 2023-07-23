@@ -1,10 +1,15 @@
 import './App.css'  
-import Homepage from './components/Homepage.jsx'
+import {Route, Routes} from 'react-router-dom' 
+import Homepage from './components/Homepage.jsx'     
+import SignupPage from './components/SignupPage'   
 
 function App() {
   return (
     <>  
-      <Homepage/>
+      <Routes>
+        <Route exact path='/' element={<Homepage/>} /> 
+        <Route exact path='/signup' element={<SignupPage/>} />   
+      </Routes>
     </>
   )
 }

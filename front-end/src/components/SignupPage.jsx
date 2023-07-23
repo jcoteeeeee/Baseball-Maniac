@@ -25,16 +25,42 @@ const SignupPage = () => {
 
     const handleFavTeamChange = e => {
         setFavTeam(e.target.value) 
+    } 
+
+    const handleSubmit = () => {
+        try{
+            const postRequest = async () => {
+                const response = await fetch('http://localhost:3000/users', {
+                    method: 'POST', 
+                    headers: {'Content-type': 'application/json'}, 
+                    body: JSON.stringify({
+                        name: name.value, 
+                        username: username.value, 
+                        emai: email.value, 
+                        password: password.value, 
+                        fav_team: favTeam.value 
+                    })
+                })
+                if (response.ok){
+                    const respToJson = await response.json() 
+                    console.log(respToJson) 
+                }
+            } 
+            postRequest() 
+        } catch(error){
+            console.log(error)  
+        }
     }
 
     return(
         <>  
-            <form id='signup-form'>
-                <input id='name' placeholder='name' type='text' value={name} onChange={handleNameChange} />
-                <input id='username' placeholder='username' type='text' value={username} onChange={handleUsrChange} />
-                <input id='email' placeholder='email' type='email' value={email} onChange={handleEmailChange} />
-                <input id='password' placeholder='password' type='password' value={password} onChange={handlePswdChange} />
-                <input id='fav_team' placeholder='fav_team' type='text' value={favTeam} onChange={handleFavTeamChange} />
+            <form id='signup-form' onSubmit={handleSubmit} >
+                <input id='name' name='name' placeholder='Name' type='text' value={name} onChange={handleNameChange} />
+                <input id='username' name='username' placeholder='Username' type='text' value={username} onChange={handleUsrChange} />
+                <input id='email' name='email' placeholder='Email' type='email' value={email} onChange={handleEmailChange} />
+                <input id='password' name='password' placeholder='Password' type='password' value={password} onChange={handlePswdChange} />
+                <input id='fav_team' name='favTeam' placeholder='Favorite Team' type='text' value={favTeam} onChange={handleFavTeamChange} />  
+                <button>Create account</button>
             </form>  
         </>
     )
