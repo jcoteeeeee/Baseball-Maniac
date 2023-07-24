@@ -1,7 +1,8 @@
 import React from 'react'  
 import Header from './Header.jsx'   
 
-const Homepage = ({goToSignup, goToLogin}) => {
+const Homepage = ({goToSignup, goToLogin}) => { 
+    console.log(typeof(goToLogin))
     return(
         <div id='homepage-container'> 
             <div>  

@@ -19,6 +19,14 @@
                     "location": "Fake Stadium", 
                     "starting_pitcher": "Fake Pitcher", 
                     "note": ""
+                }, 
+
+            "user-stats": 
+                { 
+                    "games": 0, 
+                    "wins": 0, 
+                    "losses": 0, 
+                    "percentage": 0
                 }
         }
     ]

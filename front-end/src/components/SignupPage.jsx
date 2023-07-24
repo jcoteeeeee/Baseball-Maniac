@@ -1,6 +1,6 @@
 import React, { useState } from 'react' 
 
-const SignupPage = () => { 
+const SignupPage = ({goToProfilePage}) => { 
     const [name, setName] = useState('')  
     const [username, setUsername] = useState('')  
     const [email, setEmail] = useState('') 
@@ -50,6 +50,7 @@ const SignupPage = () => {
                 }
             } 
             postRequest() 
+            goToProfilePage() 
         } catch(error){
             console.log(error)  
         }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'  
 
-const LoginPage = () => { 
+const LoginPage = ({goToProfilePage}) => { 
     const [username, setUsername] = useState('')  
     const [password, setPassword] = useState('')  
 
@@ -10,14 +10,23 @@ const LoginPage = () => {
 
     const handlePasswordChange = e => {
         setPassword(e.target.value)  
-    }
+    }   
+
+    console.log(typeof(goToProfilePage))
+
+    const handleSubmit = e => {  
+        e.preventDefault() 
+        goToProfilePage() 
+        console.log('click')
+    }  
 
     return(
         <> 
-            <form>
+            <form onSubmit={handleSubmit} >
                 <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
-                <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} /> 
-            </form>
+                <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} />   
+                <button id='login-btn'>Login</button>
+            </form> 
         </>  
     )
 }  
