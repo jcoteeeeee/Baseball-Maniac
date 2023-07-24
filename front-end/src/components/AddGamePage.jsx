@@ -7,7 +7,7 @@ const AddGamePage = () => {
     const [opponent, setOpponent] = useState('') 
     const [location, setLocation] = useState('') 
     const [startingPitcher, setStartingPitcher] = useState('') 
-    const [note, setNote] = useState('')   
+    const [note, setNote] = useState('')           
 
     const handleDateChange = e => {
         setDate(e.target.value) 
