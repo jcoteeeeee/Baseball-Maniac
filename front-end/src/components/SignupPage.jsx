@@ -36,12 +36,13 @@ const SignupPage = ({goToProfilePage}) => {
                 const response = await fetch('http://localhost:3000/users', {
                     method: 'POST', 
                     headers: {'Content-type': 'application/json'}, 
-                    body: JSON.stringify({
+                    body: JSON.stringify({userInfo: {
                         name: name.value, 
                         username: username.value, 
                         emai: email.value, 
                         password: password.value, 
                         fav_team: favTeam.value 
+                    }
                     })
                 })
                 if (response.ok){
