@@ -1,14 +1,15 @@
 import React, { useState } from 'react' 
 
 const SignupPage = () => { 
-    const [name, setName] = useState('') 
-    const [username, setUsername] = useState('') 
+    const [name, setName] = useState('')  
+    const [username, setUsername] = useState('')  
     const [email, setEmail] = useState('') 
     const [password, setPassword] = useState('')  
     const [favTeam, setFavTeam] = useState('') 
 
     const handleNameChange = e => {
         setName(e.target.value) 
+        console.log(name)
     }  
 
     const handleUsrChange = e => {
@@ -28,6 +29,7 @@ const SignupPage = () => {
     } 
 
     const handleSubmit = () => {
+        console.log('submitted') 
         try{
             const postRequest = async () => {
                 const response = await fetch('http://localhost:3000/users', {
