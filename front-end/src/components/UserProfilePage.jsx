@@ -1,6 +1,6 @@
 import React from 'react'  
 
-const UserProfilePage = ({goToAddGamePage}) => {
+const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
     return(
         <> 
             <section>
@@ -28,6 +28,7 @@ const UserProfilePage = ({goToAddGamePage}) => {
                         <th>Location</th> 
                         <th>Starting Pitcher</th> 
                         <th>Note</th> 
+                        <th>Edit/Delete game</th>
                     </tr> 
                     <tr>
                         <td>7/20/2030</td> 
@@ -37,6 +38,10 @@ const UserProfilePage = ({goToAddGamePage}) => {
                         <td>Citi Field</td> 
                         <td>Fake Pitcher</td> 
                         <td>Great</td> 
+                        <td>
+                            <button onClick={goToEditGamePage}>Edit Game</button> 
+                            <button>Delete Game</button>  
+                        </td>
                     </tr>
                 </table> 
             </section>
