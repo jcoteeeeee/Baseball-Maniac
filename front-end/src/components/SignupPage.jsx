@@ -28,9 +28,10 @@ const SignupPage = () => {
         setFavTeam(e.target.value) 
     } 
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {  
+        e.preventDefault() 
         console.log('submitted') 
-        try{
+        try{ 
             const postRequest = async () => {
                 const response = await fetch('http://localhost:3000/users', {
                     method: 'POST', 
