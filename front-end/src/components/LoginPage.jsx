@@ -1,4 +1,5 @@
 import React, {useState} from 'react'  
+import Header from './Header'  
 
 const LoginPage = ({goToProfilePage}) => { 
     const [username, setUsername] = useState('')  
@@ -21,7 +22,8 @@ const LoginPage = ({goToProfilePage}) => {
     }  
 
     return(
-        <> 
+        <>  
+            <Header/> 
             <form onSubmit={handleSubmit} >
                 <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
                 <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} />   

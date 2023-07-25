@@ -10,8 +10,8 @@ const Homepage = ({goToSignup, goToLogin}) => {
             </div> 
             <div id='home-main'>
                 <h2 id='slogan'>A place for baseball fans to record their own history</h2> 
-                <button onClick={goToSignup}>Create an account</button> 
-                <button onClick={goToLogin}>Login</button>
+                <button id='tologin-btn' onClick={goToLogin}>Login</button>
+                <p id='tosignup-p' onClick={goToSignup}>Or create an account</p> 
             </div>
         </div> 
     ) 

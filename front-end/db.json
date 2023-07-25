@@ -2,7 +2,8 @@
     "users": [
         {
             "user-info": 
-                {
+                {   
+                    "id": 0, 
                     "name": "fake person", 
                     "username": "fake_person", 
                     "email": "fakeemail@email.com", 
@@ -10,7 +11,7 @@
                     "fav_team": "Baseball Team" 
                 }, 
 
-            "user-games": 
+            "user-games": [
                 {
                     "date": null, 
                     "result": "Win", 
@@ -19,7 +20,8 @@
                     "location": "Fake Stadium", 
                     "starting_pitcher": "Fake Pitcher", 
                     "note": ""
-                }, 
+                } 
+            ], 
 
             "user-stats": 
                 { 
