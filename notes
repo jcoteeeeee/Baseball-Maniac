@@ -5,5 +5,8 @@
                         Login          Signup 
                             |           | 
                             User Home Page 
+                                | 
+                            User Profile Page 
+                                |           | 
+                            AddGamePage     EditGamePage 
                                 
-    

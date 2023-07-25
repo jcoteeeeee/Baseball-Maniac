@@ -1,4 +1,5 @@
 import React, { useState } from 'react' 
+import Header from './Header' 
 
 const SignupPage = ({goToProfilePage}) => { 
     const [name, setName] = useState('')  
@@ -26,7 +27,7 @@ const SignupPage = ({goToProfilePage}) => {
 
     const handleFavTeamChange = e => {
         setFavTeam(e.target.value) 
-    } 
+    }   
 
     const handleSubmit = (e) => {  
         e.preventDefault() 
@@ -36,12 +37,12 @@ const SignupPage = ({goToProfilePage}) => {
                 const response = await fetch('http://localhost:3000/users', {
                     method: 'POST', 
                     headers: {'Content-type': 'application/json'}, 
-                    body: JSON.stringify({userInfo: {
-                        name: name.value, 
-                        username: username.value, 
-                        emai: email.value, 
-                        password: password.value, 
-                        fav_team: favTeam.value 
+                    body: JSON.stringify({"user-info": {
+                        name: name,
+                        username: username, 
+                        email: email, 
+                        password: password, 
+                        fav_team: favTeam  
                     }
                     })
                 })
@@ -51,14 +52,16 @@ const SignupPage = ({goToProfilePage}) => {
                 }
             } 
             postRequest() 
-            goToProfilePage() 
+            // goToProfilePage() 
         } catch(error){
-            console.log(error)  
+            console.log(error)   
+            // res.status(500).json({ error: 'Internal server error' })
         }
     }
 
     return(
         <>  
+            <Header/> 
             <form id='signup-form' onSubmit={handleSubmit} >
                 <input id='name' name='name' placeholder='Name' type='text' value={name} onChange={handleNameChange} />
                 <input id='username' name='username' placeholder='Username' type='text' value={username} onChange={handleUsrChange} />
