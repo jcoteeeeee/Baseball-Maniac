@@ -42,8 +42,8 @@ function App() {
         <Route exact path='/signup' element={<SignupPage goToProfilePage={goToProfilePage} />} />   
         <Route exact path='/login' element={<LoginPage goToProfilePage={goToProfilePage} />} />   
         <Route exact path='/userprofilepage' element={<UserProfilePage goToAddGamePage={goToAddGamePage} goToEditGamePage={goToEditGamePage} /> } />   
-        <Route exact path='addgamepage' element={<AddGamePage/> } />   
-        <Route exact path='editgamepage' element={<EditGamePage/> }/>   
+        <Route exact path='/addgamepage' element={<AddGamePage/> } />   
+        <Route exact path='/editgamepage' element={<EditGamePage/> }/>   
       </Routes>
     </>
   )

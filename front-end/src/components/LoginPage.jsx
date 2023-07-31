@@ -1,5 +1,5 @@
 import React, {useState} from 'react'  
-import Header from './Header'  
+import Header from './Header'   
 
 const LoginPage = ({goToProfilePage}) => { 
     const [username, setUsername] = useState('')  
@@ -22,14 +22,16 @@ const LoginPage = ({goToProfilePage}) => {
     }  
 
     return(
-        <>  
+        <div id='loginpage-container'>  
             <Header/> 
-            <form onSubmit={handleSubmit} >
-                <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
-                <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} />   
-                <button id='login-btn'>Login</button>
-            </form> 
-        </>  
+            <div> 
+                <form onSubmit={handleSubmit} >
+                    <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
+                    <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} />   
+                    <button id='login-btn'>Login</button>
+                </form>  
+            </div>
+        </div>  
     )
 }  
 

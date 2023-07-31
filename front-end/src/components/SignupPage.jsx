@@ -29,21 +29,49 @@ const SignupPage = ({goToProfilePage}) => {
         setFavTeam(e.target.value) 
     }   
 
-    const handleSubmit = (e) => {  
+    // const handleSubmit = (e) => {  
+    //     e.preventDefault() 
+    //     console.log('submitted') 
+    //     try{ 
+    //         const postRequest = async () => {
+    //             const response = await fetch('http://localhost:3000/users', {
+    //                 method: 'POST', 
+    //                 headers: {'Content-type': 'application/json'}, 
+    //                 body: JSON.stringify({"user-info": {
+    //                     name: name,
+    //                     username: username, 
+    //                     email: email, 
+    //                     password: password, 
+    //                     fav_team: favTeam  
+    //                 }
+    //                 })
+    //             })
+    //             if (response.ok){
+    //                 const respToJson = await response.json() 
+    //                 console.log(respToJson) 
+    //             }
+    //         } 
+    //         postRequest() 
+    //         // goToProfilePage() 
+    //     } catch(error){
+    //         console.log(error)   
+    //         // res.status(500).json({ error: 'Internal server error' })
+    //     }
+    // }  
+
+    const handleSubmit = e => {
         e.preventDefault() 
-        console.log('submitted') 
-        try{ 
+        try{
             const postRequest = async () => {
-                const response = await fetch('http://localhost:3000/users', {
+                const response = await fetch('http://localhost:3000/user-info', {
                     method: 'POST', 
-                    headers: {'Content-type': 'application/json'}, 
-                    body: JSON.stringify({"user-info": {
-                        name: name,
+                    headers: {'Content-Type': 'application/json'}, 
+                    body: JSON.stringify({
+                        name: name, 
                         username: username, 
                         email: email, 
                         password: password, 
-                        fav_team: favTeam  
-                    }
+                        favTeam: favTeam 
                     })
                 })
                 if (response.ok){
@@ -52,10 +80,8 @@ const SignupPage = ({goToProfilePage}) => {
                 }
             } 
             postRequest() 
-            // goToProfilePage() 
         } catch(error){
-            console.log(error)   
-            // res.status(500).json({ error: 'Internal server error' })
+            console.log(error) 
         }
     }
 
