@@ -1,6 +1,6 @@
 import React, {useState} from 'react'  
 
-const AddGamePage = () => { 
+const AddGamePage = ({goToProfilePage}) => {   
     const [date, setDate] = useState('') 
     const [result, setResult] = useState('') 
     const [score, setScore] = useState('') 
@@ -37,18 +37,47 @@ const AddGamePage = () => {
 
     const handleNoteChange = e => {
         setNote(e.target.value)  
+    } 
+
+    const handleSubmit = e => {
+        e.preventDefault() 
+        try{
+            const postReq = async () => {
+                const response = await fetch('http://localhost:3000/user-games', {
+                    method: 'POST', 
+                    headers: {'Content-Type': 'application/json'}, 
+                    body: JSON.stringify({
+                        date: date, 
+                        result: result, 
+                        score: score, 
+                        opponent: opponent, 
+                        location: location, 
+                        starting_pitcher: startingPitcher, 
+                        note: note
+                    })
+                }) 
+                if (response.ok){
+                    const respToJson = await response.json() 
+                    console.log(respToJson) 
+                }
+            }
+            postReq() 
+            goToProfilePage() 
+        } catch(error){
+            console.log(error) 
+        }
     }
  
     return(
         <>  
-            <form> 
-                <input placeholder='date' type='date' value={date} onChange={handleDateChange} /> 
-                <input placeholder='result' type='string' value={result} onChange={handleResultChange} /> 
-                <input placeholder='score' type='string' value={score} onChange={handleScoreChange} /> 
-                <input placeholder='opponent' type='string' value={opponent} onChange={handleOpponentChange} /> 
-                <input placeholder='location' type='string' value={location} onChange={handleLocationChange} /> 
-                <input placeholder='starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />  
-                <input placeholder='note' type='string' value={note} onChange={handleNoteChange} />    
+            <form id='ag-form' onSubmit={handleSubmit} >  
+                <input id='date' placeholder='date' type='date' value={date} onChange={handleDateChange} /> 
+                <input id='result' placeholder='result' type='string' value={result} onChange={handleResultChange} /> 
+                <input id='score' placeholder='score' type='string' value={score} onChange={handleScoreChange} /> 
+                <input id='opponent' placeholder='opponent' type='string' value={opponent} onChange={handleOpponentChange} /> 
+                <input id='location' placeholder='location' type='string' value={location} onChange={handleLocationChange} /> 
+                <input id='starting-pitcher' placeholder='starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />  
+                <input id='note' placeholder='note' type='string' value={note} onChange={handleNoteChange} />    
                 <button>Add game</button> 
             </form>
         </>
