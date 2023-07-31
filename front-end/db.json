@@ -8,7 +8,7 @@
                     "username": "fake_person", 
                     "email": "fakeemail@email.com", 
                     "password": "fakepassword", 
-                    "fav_team": "Baseball Team" 
+                    "fav_team": "Baseball Team"  
                 }, 
 
             "user-games": [
@@ -19,7 +19,7 @@
                     "opponent": "Fake Team", 
                     "location": "Fake Stadium", 
                     "starting_pitcher": "Fake Pitcher", 
-                    "note": ""
+                    "note": ""  
                 } 
             ], 
 

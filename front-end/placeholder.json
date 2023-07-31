@@ -1,0 +1,64 @@
+{
+  "user-info": [
+    {
+      "id": 0,
+      "name": "fake person",
+      "username": "fake_person",
+      "email": "fakeemail@email.com",
+      "password": "fakepassword",
+      "fav_team": "Baseball Team"
+    },
+    {
+      "name": "",
+      "username": "john@gmail.com",
+      "email": "",
+      "password": "password",
+      "favTeam": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "username": "john@gmail.com",
+      "email": "",
+      "password": "password",
+      "favTeam": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "username": "john@gmail.com",
+      "email": "",
+      "password": "password",
+      "favTeam": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "username": "john@gmail.com",
+      "email": "",
+      "password": "password",
+      "favTeam": "",
+      "id": 4
+    },
+    {
+      "name": "Bada Bing",
+      "username": "sakdsad",
+      "email": "email@email",
+      "password": "password",
+      "favTeam": "sddfdfd",
+      "id": 5
+    }
+  ],
+  "user-games": [
+    {
+      "id": 0,
+      "date": null,
+      "result": "Win",
+      "score": "1-0",
+      "opponent": "Fake Team",
+      "location": "Fake Stadium",
+      "starting_pitcher": "Fake Pitcher",
+      "note": ""
+    }
+  ]
+}

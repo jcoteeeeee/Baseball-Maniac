@@ -6,6 +6,7 @@
 
 :root{
   --main-blue: rgb(0, 0, 255); 
+  --darker-blue: rgb(10, 10, 156);   
   --main-red: rgb(255, 0, 0); 
   --main-white: rgb(255, 255, 255); 
   --cream-white: rgb(237, 225, 213); 
@@ -23,7 +24,8 @@ header{
   display: flex; 
   justify-content: center; 
   background-color: var(--powder-blue); 
-  /* border-bottom: 2px solid var(--main-red);   */
+  border-bottom: 4px solid var(--main-red);  
+  outline: 4px solid blue; 
   padding: 10px; 
 } 
 
@@ -60,33 +62,47 @@ header{
   filter: drop-shadow(2px 1px var(--main-blue)); 
   font-size: var(--slogan-font-size); 
   padding: 5px; 
-  margin: 20px; 
+  margin: 20px;  
+  /* text-decoration: underline;  */
 } 
 
 #tologin-btn{
   width: 120px; 
   padding: 10px; 
-  margin: 20px; 
+  margin: 10px; 
+  color: var(--main-blue); 
   background-color: var(--powder-blue); 
   border: none; 
   border-radius: 10px; 
-  
+  box-shadow: 2px 5px var(--main-blue);   
 } 
 
 #tologin-btn:hover{
-  background-color: lightskyblue; 
+  /* background-color: rgb(60, 151, 208);  */     
+  color: var(--darker-blue); 
+  box-shadow: 2px 5px var(--darker-blue);   
   cursor: pointer;   
 } 
 
 #tosignup-p{
   color: var(--main-blue); 
   padding: 5px; 
-  margin: 20px; 
+  margin: 5px;  
   /* filter: drop-shadow(2px 1px var(--main-blue));  */
 }  
 
 #tosignup-p:hover{
-  color: var(--main-red); 
+  /* color: var(--main-red);  */ 
+  text-decoration: underline;
   cursor: pointer; 
 }
 
+________ 
+/* Login page */  
+
+#loginpage-container{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+} 

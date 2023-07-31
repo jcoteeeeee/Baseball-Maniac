@@ -16,5 +16,5 @@ const Homepage = ({goToSignup, goToLogin}) => {
         </div> 
     ) 
 }    
-
+    
 export default Homepage 
