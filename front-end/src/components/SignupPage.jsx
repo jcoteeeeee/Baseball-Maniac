@@ -79,7 +79,8 @@ const SignupPage = ({goToProfilePage}) => {
                     console.log(respToJson) 
                 }
             } 
-            postRequest() 
+            postRequest()  
+            goToProfilePage() 
         } catch(error){
             console.log(error) 
         }
