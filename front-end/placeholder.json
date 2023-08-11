@@ -57,6 +57,26 @@
       "starting_pitcher": "pitcher",
       "note": "note ",
       "id": 3
+    },
+    {
+      "date": "",
+      "result": "",
+      "score": "",
+      "opponent": "",
+      "location": "",
+      "starting_pitcher": "",
+      "note": "",
+      "id": 4
+    },
+    {
+      "date": "2023-08-25",
+      "result": "Win",
+      "score": "20-0",
+      "opponent": "team",
+      "location": "",
+      "starting_pitcher": "guy",
+      "note": "Game",
+      "id": 5
     }
   ]
 }
