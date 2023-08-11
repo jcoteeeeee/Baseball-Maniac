@@ -1,0 +1,16 @@
+#headerContainer{
+  display: flex; 
+  justify-content: center; 
+  background-color: var(--powder-blue); 
+  border-bottom: 4px solid var(--main-red);  
+  outline: 4px solid blue; 
+  padding: 10px; 
+} 
+
+#logo{  
+  font-family: var(--logo-font-family); 
+  font-size: var(--logo-font-size); 
+  color: var(--main-blue); 
+  filter: drop-shadow(2px 1px var(--main-red)); 
+  /* text-decoration:  underline  */
+}  

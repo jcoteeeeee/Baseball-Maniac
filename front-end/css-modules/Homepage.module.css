@@ -1,0 +1,59 @@
+#homepageContainer{
+  display: flex; 
+  flex-direction: column; 
+}  
+
+#homeMain{  
+  width: 100%; 
+  height: 600px; 
+  background-image: url('https://static.vecteezy.com/system/resources/previews/000/236/108/original/baseball-stadium-background-vector.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat;   
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+} 
+
+#slogan{
+  font-family: var(--slogan-font-family); 
+  color: var(--main-white); 
+  filter: drop-shadow(2px 1px var(--main-blue)); 
+  font-size: var(--slogan-font-size); 
+  padding: 5px; 
+  margin: 20px;  
+  /* text-decoration: underline;  */
+} 
+
+#toLoginBtn{
+  width: 120px; 
+  padding: 10px; 
+  margin: 10px; 
+  color: var(--main-blue); 
+  background-color: var(--powder-blue); 
+  border: none; 
+  border-radius: 10px; 
+  box-shadow: 2px 5px var(--main-blue);   
+} 
+
+#toLoginBtn:hover{
+  /* background-color: rgb(60, 151, 208);  */     
+  background-color: var(--main-blue); 
+  color: var(--powder-blue); 
+  box-shadow: 2px 5px var(--powder-blue);   
+  cursor: pointer;   
+} 
+
+#toSignupP{
+  color: var(--main-blue); 
+  padding: 5px; 
+  margin: 5px;  
+  /* filter: drop-shadow(2px 1px var(--main-blue));  */
+}  
+
+#toSignupP:hover{
+  /* color: var(--main-red);  */ 
+  text-decoration: underline;
+  cursor: pointer; 
+} 

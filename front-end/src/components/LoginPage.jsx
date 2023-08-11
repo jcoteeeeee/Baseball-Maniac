@@ -1,5 +1,6 @@
 import React, {useState} from 'react'  
-import Header from './Header'   
+import Header from './Header'     
+import styles from '/css-modules/LoginPage.module.css'  
 
 const LoginPage = ({goToProfilePage}) => { 
     const [username, setUsername] = useState('')  
@@ -22,8 +23,9 @@ const LoginPage = ({goToProfilePage}) => {
     }  
 
     return(
-        <div id='loginpage-container'>  
-            <Header/> 
+        <>
+        <Header/> 
+        <div id={styles.loginPageContainer}>  
             <div> 
                 <form onSubmit={handleSubmit} >
                     <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
@@ -31,7 +33,8 @@ const LoginPage = ({goToProfilePage}) => {
                     <button id='login-btn'>Login</button>
                 </form>  
             </div>
-        </div>  
+        </div>    
+        </>
     )
 }  
 

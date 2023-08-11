@@ -1,10 +1,11 @@
-import React from 'react'  
+import React from 'react'    
+import styles from '/css-modules/Header.module.css'
 
 const Header = () => {
     return(
-        <header id='header'>
+        <header id={styles.headerContainer}>
             <div> 
-                <h1 id='logo'>Baseball Maniac</h1>
+                <h1 id={styles.logo}>Baseball Maniac</h1>
             </div> 
         </header> 
     )
