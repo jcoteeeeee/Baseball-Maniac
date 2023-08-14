@@ -23,17 +23,18 @@ const LoginPage = ({goToProfilePage}) => {
     }  
 
     return(
-        <>
-        <Header/> 
-        <div id={styles.loginPageContainer}>  
-            <div> 
-                <form onSubmit={handleSubmit} >
-                    <input id='username' name='username' type='string' value={username} onChange={handleUsrChange} /> 
-                    <input id='password' name='password' type='password' value={password} onChange={handlePasswordChange} />   
-                    <button id='login-btn'>Login</button>
-                </form>  
-            </div>
-        </div>    
+        <>  
+            <Header/> 
+            <div id={styles.loginPageContainer}>  
+                <div id={styles.formContainer}> 
+                    <form id={styles.loginForm} onSubmit={handleSubmit} >
+                        <h1 id={styles.loginFormHeading}>Weclome back</h1>
+                        <input className={styles.loginInput} id='username' name='username' type='string' placeholder='Username' value={username} onChange={handleUsrChange} /> 
+                        <input className={styles.loginInput} id='password' name='password' type='password' placeholder='Password' value={password} onChange={handlePasswordChange} />   
+                        <button id={styles.loginBtn}>Login</button>  
+                    </form>   
+                </div> 
+            </div>    
         </>
     )
 }  

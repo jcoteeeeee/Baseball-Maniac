@@ -6,7 +6,7 @@
 #homeMain{  
   width: 100%; 
   height: 600px; 
-  background-image: url('https://static.vecteezy.com/system/resources/previews/000/236/108/original/baseball-stadium-background-vector.jpg'); 
+  background-image: var(--main-background-img); 
   background-size: cover;  
   background-position: center; 
   background-repeat: no-repeat;   
@@ -27,7 +27,9 @@
 } 
 
 #toLoginBtn{
-  width: 120px; 
+  font-family: var(--slogan-font-family); 
+  font-size: var(--logsigbtn-font-size); 
+  width: 150px; 
   padding: 10px; 
   margin: 10px; 
   color: var(--main-blue); 
@@ -38,14 +40,15 @@
 } 
 
 #toLoginBtn:hover{
-  /* background-color: rgb(60, 151, 208);  */     
-  background-color: var(--main-blue); 
-  color: var(--powder-blue); 
-  box-shadow: 2px 5px var(--powder-blue);   
+  /* background-color: var(--darker-p-blue);   */ 
+  box-shadow: 5px 10px var(--main-blue);   
   cursor: pointer;   
 } 
 
-#toSignupP{
+#toSignupP{ 
+  --logsigbtn-font-size: 22px; 
+  font-size: var(--logsigbtn-font-size);  
+  font-family: var(--slogan-font-family);  
   color: var(--main-blue); 
   padding: 5px; 
   margin: 5px;  
