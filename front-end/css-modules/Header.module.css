@@ -2,8 +2,8 @@
   display: flex; 
   justify-content: center; 
   background-color: var(--powder-blue); 
-  border-bottom: 4px solid var(--main-red);  
-  outline: 4px solid blue; 
+  border-bottom: 4px solid var(--main-blue);  
+  /* outline: 4px solid blue;  */
   padding: 10px; 
 } 
 
