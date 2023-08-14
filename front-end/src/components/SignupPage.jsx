@@ -1,5 +1,6 @@
 import React, { useState } from 'react' 
-import Header from './Header' 
+import Header from './Header'   
+import styles from '/css-modules/SignupPage.module.css' 
 
 const SignupPage = ({goToProfilePage}) => { 
     const [name, setName] = useState('')  
@@ -89,14 +90,17 @@ const SignupPage = ({goToProfilePage}) => {
     return(
         <>  
             <Header/> 
-            <form id='signup-form' onSubmit={handleSubmit} >
-                <input id='name' name='name' placeholder='Name' type='text' value={name} onChange={handleNameChange} />
-                <input id='username' name='username' placeholder='Username' type='text' value={username} onChange={handleUsrChange} />
-                <input id='email' name='email' placeholder='Email' type='email' value={email} onChange={handleEmailChange} />
-                <input id='password' name='password' placeholder='Password' type='password' value={password} onChange={handlePswdChange} />
-                <input id='fav_team' name='favTeam' placeholder='Favorite Team' type='text' value={favTeam} onChange={handleFavTeamChange} />  
-                <button>Create account</button>
-            </form>  
+            <div id={styles.signupFormContainer}> 
+                <form id={styles.signupForm} onSubmit={handleSubmit} >  
+                    <h1 id={styles.signupFormHeading}> Begin your history</h1>
+                    <input className={styles.signupInput} id='name' name='name' placeholder='Name' type='text' value={name} onChange={handleNameChange} />
+                    <input className={styles.signupInput} id='username' name='username' placeholder='Username' type='text' value={username} onChange={handleUsrChange} />
+                    <input className={styles.signupInput} id='email' name='email' placeholder='Email' type='email' value={email} onChange={handleEmailChange} />
+                    <input className={styles.signupInput} id='password' name='password' placeholder='Password' type='password' value={password} onChange={handlePswdChange} />
+                    <input className={styles.signupInput} id='fav_team' name='favTeam' placeholder='Favorite Team' type='text' value={favTeam} onChange={handleFavTeamChange} />  
+                    <button id={styles.signupBtn} >Create account</button>
+                </form>    
+            </div>
         </>
     )
 }  
