@@ -29,27 +29,29 @@
 
 #loginFormHeading{
   color: var(--main-blue); 
+  font-family: var(--slogan-font-family); 
   margin: 20px; 
 }
 
 .loginInput{
   height: 40px; 
   width: 250px; 
-  margin: 30px; 
+  margin: 20px; 
   border: none; 
   border-radius: 10px; 
 }  
 
-#loginBtn{
+#loginBtn{  
+  font-family: var(--slogan-font-family); 
   color: var(--main-white); 
   background-color: var(--main-blue); 
-  height: 20px; 
+  height: 30px; 
   width: 80px; 
   border: 2px solid var(--main-white); 
   border-radius: 5px; 
-  margin: 20px; 
+  margin: 20px;  
 } 
 
 #loginBtn:hover{
-
+  background-color: var(--darker-blue); 
 }
