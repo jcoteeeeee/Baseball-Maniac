@@ -45,6 +45,7 @@
     margin: 15px;  
 }  
 
-#signupBtn:hover{
-    background-color: var(--darker-blue); 
+#signupBtn:hover{  
+    background-color: var(--darker-blue);   
+    cursor: pointer; 
 }
