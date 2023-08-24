@@ -15,7 +15,8 @@
   --main-background-img: url('https://static.vecteezy.com/system/resources/previews/000/236/108/original/baseball-stadium-background-vector.jpg');
 
   --logo-font-size: 50px; 
-  --logo-font-family: Brush Script MT, Brush Script Std, cursive; 
+  /* --logo-font-family: Brush Script MT, Brush Script Std, cursive;  */  
+    --logo-font-family: DejaVu Sans Mono, monospace; 
   --slogan-font-family: DejaVu Sans Mono, monospace; 
   --slogan-font-size: 30px; 
   --logsigbtn-font-size: 18px; 

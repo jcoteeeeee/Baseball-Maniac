@@ -28,7 +28,7 @@ const LoginPage = ({goToProfilePage}) => {
             <div id={styles.loginPageContainer}>  
                 <div id={styles.formContainer}> 
                     <form id={styles.loginForm} onSubmit={handleSubmit} >
-                        <h1 id={styles.loginFormHeading}>Weclome back</h1>
+                        <h1 id={styles.loginFormHeading}>Welcome back</h1>
                         <input className={styles.loginInput} id='username' name='username' type='string' placeholder='Username' value={username} onChange={handleUsrChange} /> 
                         <input className={styles.loginInput} id='password' name='password' type='password' placeholder='Password' value={password} onChange={handlePasswordChange} />   
                         <button id={styles.loginBtn}>Login</button>  

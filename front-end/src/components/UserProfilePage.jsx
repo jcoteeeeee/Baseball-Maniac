@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'   
 import Header from './Header'  
+import styles from '/css-modules/UserProfilePage.module.css' 
 
 const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {   
     const [games, setGames] = useState([])   
@@ -24,15 +25,15 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
     return(
         <> 
             <Header/> 
-            <section>
-                <div>
+            <section id={styles.profileContainer}> 
+                <div id={styles.userInfo}>
                     <h1>@Username</h1>  
+                    <img id={styles.userImg} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hxIGIRPVvvpnSQjDGNI0undzKEHbVYvWe-7bvt9W4A&s' alt='profile picture' />  
                     <p>Name</p>  
-                    <img alt='profile picture' />  
                 </div> 
 
-                <div>
-                    <h1>@Username's stats</h1> 
+                <div id={styles.userStats}>
+                    <h1>@Username's history</h1> 
                     <p>Total games attended:</p> 
                     <p>Win-Loss Record: </p> 
                     <p>Winnng percentage: </p> 
