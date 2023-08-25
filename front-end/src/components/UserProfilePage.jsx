@@ -39,9 +39,9 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
                     <p>Winnng percentage: </p> 
                 </div> 
             </section> 
-            <section id='user-table'>  
-                <button onClick={goToAddGamePage}>Add game</button>
-                <table>
+            <section id={styles.userContent} >  
+                <button onClick={goToAddGamePage} id={styles.addGameBtn} >Add game</button>
+                <table id={styles.userTable} >
                     <thead> 
                         <th>Date</th>
                         <th>Result</th>  
@@ -50,7 +50,7 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
                         <th>Location</th> 
                         <th>Starting Pitcher</th> 
                         <th>Note</th> 
-                        <th>Edit/Delete game</th>
+                        <th>Action</th>
                     </thead> 
                     <tbody> 
                         {
@@ -60,7 +60,7 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
                                 </tr>
                             })
                         }
-                        {/* <tr>
+                        <tr>
                             <td>7/20/2030</td> 
                             <td>Win</td> 
                             <td>1-0</td> 
@@ -69,10 +69,10 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
                             <td>Fake Pitcher</td> 
                             <td>Great</td> 
                             <td>
-                                <button onClick={goToEditGamePage}>Edit Game</button> 
-                                <button>Delete Game</button>  
+                                <button onClick={goToEditGamePage} id={styles.editGameBtn} >Edit Game</button> 
+                                <button id={styles.deleteGameBtn} >Delete Game</button>  
                             </td>    
-                        </tr>   */}
+                        </tr>   
                     </tbody>
                 </table> 
             </section>
