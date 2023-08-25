@@ -1,8 +1,9 @@
-#profileContainer{
+#profileContainer{  
+    background-color: var(--lighter-powder-blue); 
     border-bottom: 2px solid var(--darker-blue); 
     display: grid; 
     /* background-color: red;   */
-    margin-bottom: 50px; 
+    /* margin-bottom: 50px;  */
     grid-template-rows: 100px 100px; 
     grid-template-columns: 1fr 3fr; 
 } 
@@ -40,3 +41,70 @@
 #userStats h1, #userStats p{
     margin: 10px; 
 } 
+
+#userContent {
+    background-color: var(--powder-blue);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}  
+
+#addGameBtn{
+    font-family: var(--slogan-font-family); 
+    font-size: 20px; 
+    margin: 50px 10px 5px; 
+    background-color: blue; 
+    color: white; 
+    height: 40px; 
+    width: 100px; 
+    border: none; 
+    border-radius: 10px; 
+} 
+
+#addGameBtn:hover{
+    background-color: var(--darker-blue); 
+    cursor: pointer; 
+} 
+
+#userTable{ 
+    width: 1200px;   
+    font-family: var(--slogan-font-family); 
+    /* border: 1px solid var(--darker-blue);  */
+}   
+
+th, td{
+    border: 2px solid var(--darker-blue);   
+    color: var(--darker-blue); 
+    text-align: center;
+} 
+
+#editGameBtn{ 
+    font-family: var(--slogan-font-family); 
+    background-color: var(--main-blue); 
+    color: white; 
+    height: 30px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 5px; 
+} 
+
+#editGameBtn:hover{
+    background-color: var(--darker-blue); 
+    cursor: pointer; 
+} 
+
+#deleteGameBtn{   
+    font-family: var(--slogan-font-family); 
+    background-color: var(--main-red); 
+    color: white; 
+    height: 30px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 5px; 
+} 
+
+#deleteGameBtn:hover{
+    background-color: var(--dark-red); 
+    cursor: pointer; 
+}
