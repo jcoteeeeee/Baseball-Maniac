@@ -1,8 +1,10 @@
 const express = require('express') // require is how you import 
 const app = express() // express() creates an express object which is server itself
 const fs = require('fs') 
+const cors = require('cors')
 
 app.use(express.json()) 
+app.use(cors()) 
 
 app.get('/', (req, res) => {
     console.log(req.path) 
@@ -23,7 +25,9 @@ app.post('/games', (req, res) => {
         gamesObj.push(req.body) 
         const gamesStr = JSON.stringify(gamesObj) 
         fs.promises.writeFile('./data/games.txt', gamesStr)
-            .then(() => {})
+            .then(() => {
+                res.send('success')
+            })
             .catch(error => console.log(error))   
     })
 }) 
