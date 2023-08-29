@@ -8,17 +8,17 @@
   --main-blue: rgb(0, 0, 255); 
   --darker-blue: rgb(10, 10, 156);   
   --main-red: rgb(255, 0, 0); 
-  --dark-red: rgb(190, 7, 7); 
+  --darker-red: rgb(190, 7, 7); 
   --main-white: rgb(255, 255, 255); 
   --cream-white: rgb(237, 225, 213); 
   --powder-blue: rgb(197, 231, 246); 
-  --lighter-powder-blue: rgb(237, 248, 252); 
+  --lighter-powder-blue: rgb(218, 240, 248); 
   --darker-p-blue: rgb(136, 216, 243); 
   --main-background-img: url('https://static.vecteezy.com/system/resources/previews/000/236/108/original/baseball-stadium-background-vector.jpg');
 
   --logo-font-size: 50px; 
   /* --logo-font-family: Brush Script MT, Brush Script Std, cursive;  */  
-    --logo-font-family: DejaVu Sans Mono, monospace; 
+  --logo-font-family: DejaVu Sans Mono, monospace; 
   --slogan-font-family: DejaVu Sans Mono, monospace; 
   --slogan-font-size: 30px; 
   --logsigbtn-font-size: 18px; 
