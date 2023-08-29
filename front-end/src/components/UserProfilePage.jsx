@@ -20,7 +20,7 @@ const UserProfilePage = ({goToAddGamePage, goToEditGamePage}) => {
         getRequest()  
     
         console.log(games)  
-    }, [])
+    }, [games])
 
     return(
         <> 

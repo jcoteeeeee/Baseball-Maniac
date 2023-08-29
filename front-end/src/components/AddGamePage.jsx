@@ -1,4 +1,6 @@
-import React, {useState} from 'react'  
+import React, {useState} from 'react'    
+import Header from './Header'   
+import styles from '/css-modules/AddGamePage.module.css'  
 
 const AddGamePage = ({goToProfilePage}) => {   
     const [date, setDate] = useState('') 
@@ -70,16 +72,20 @@ const AddGamePage = ({goToProfilePage}) => {
  
     return(
         <>  
-            <form id='ag-form' onSubmit={handleSubmit} >  
-                <input id='date' placeholder='date' type='date' value={date} onChange={handleDateChange} /> 
-                <input id='result' placeholder='result' type='string' value={result} onChange={handleResultChange} /> 
-                <input id='score' placeholder='score' type='string' value={score} onChange={handleScoreChange} /> 
-                <input id='opponent' placeholder='opponent' type='string' value={opponent} onChange={handleOpponentChange} /> 
-                <input id='location' placeholder='location' type='string' value={location} onChange={handleLocationChange} /> 
-                <input id='starting-pitcher' placeholder='starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />  
-                <input id='note' placeholder='note' type='string' value={note} onChange={handleNoteChange} />    
-                <button>Add game</button> 
-            </form>
+            <Header/> 
+            <section className={styles.agContainer}>
+                <form id={styles.agForm} onSubmit={handleSubmit} >  
+                    <h1 id={styles.agFormHeader} >Expand your history</h1>
+                    <input className={styles.agInput} id='date' placeholder='date' type='date' value={date} onChange={handleDateChange} /> 
+                    <input className={styles.agInput} id='result' placeholder='result' type='string' value={result} onChange={handleResultChange} /> 
+                    <input className={styles.agInput} id='score' placeholder='score' type='string' value={score} onChange={handleScoreChange} /> 
+                    <input className={styles.agInput} id='opponent' placeholder='opponent' type='string' value={opponent} onChange={handleOpponentChange} /> 
+                    <input className={styles.agInput} id='location' placeholder='location' type='string' value={location} onChange={handleLocationChange} /> 
+                    <input className={styles.agInput} id='starting-pitcher' placeholder='starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />  
+                    <input className={styles.agInput} id='note' placeholder='note' type='string' value={note} onChange={handleNoteChange} />    
+                    <button id={styles.agBtn}>Add game</button> 
+                </form>   
+            </section>
         </>
     )
 } 
