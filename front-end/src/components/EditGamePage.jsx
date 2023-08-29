@@ -1,4 +1,6 @@
 import React, {useState} from 'react'  
+import Header from './Header'   
+import styles from '/css-modules/EditGamePage.module.css'  
 
 const EditGamePage = () => {  
     const [date, setDate] = useState('')
@@ -40,17 +42,21 @@ const EditGamePage = () => {
     }   
 
     return(
-        <>
-            <form>
-                <input placeholder='date' type='date' value={date} onChange={handleDateChange} />
-                <input placeholder='result' type='string' value={result} onChange={handleResultChange} />
-                <input placeholder='score' type='string' value={score} onChange={handleScoreChange} />
-                <input placeholder='opponent' type='string' value={opponent} onChange={handleOpponentChange} />
-                <input placeholder='location' type='string' value={location} onChange={handleLocationChange} />
-                <input placeholder='starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />
-                <input placeholder='note' type='string' value={note} onChange={handleNoteChange} />
-                <button>Add game</button>
-            </form>
+        <>  
+            <Header/>   
+            <section className={styles.egContainer}>
+                <form id={styles.egForm}>    
+                    <h1 id={styles.egFormHeader}>Edit your history</h1>
+                    <input className={styles.egInput} placeholder='Date' type='date' value={date} onChange={handleDateChange} />
+                    <input className={styles.egInput} placeholder='Result' type='string' value={result} onChange={handleResultChange} />
+                    <input className={styles.egInput} placeholder='Score' type='string' value={score} onChange={handleScoreChange} />
+                    <input className={styles.egInput} placeholder='Ppponent' type='string' value={opponent} onChange={handleOpponentChange} />
+                    <input className={styles.egInput} placeholder='Location' type='string' value={location} onChange={handleLocationChange} />
+                    <input className={styles.egInput} placeholder='Starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />
+                    <input className={styles.egInput} placeholder='Note' type='string' value={note} onChange={handleNoteChange} />
+                    <button id={styles.egBtn} >Edit game</button>
+                </form>  
+            </section>
         </> 
     )
 }  

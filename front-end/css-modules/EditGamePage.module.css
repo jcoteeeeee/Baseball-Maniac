@@ -1,0 +1,48 @@
+.egContainer {
+    background-color: var(--lighter-powder-blue);
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#egForm {
+    background-color: var(--main-blue);
+    width: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#egFormHeader {
+    color: white;
+    font-family: var(--slogan-font-family);
+    margin: 10px;
+}
+
+.egInput {
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+#egBtn {
+    color: white;
+    background-color: var(--main-red);
+    font-family: var(--slogan-font-family);
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#egBtn:hover {
+    cursor: pointer;
+    background-color: var(--darker-red);
+}  
