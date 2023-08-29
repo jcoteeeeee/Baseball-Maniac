@@ -50,11 +50,11 @@ const EditGamePage = () => {
                     <input className={styles.egInput} placeholder='Date' type='date' value={date} onChange={handleDateChange} />
                     <input className={styles.egInput} placeholder='Result' type='string' value={result} onChange={handleResultChange} />
                     <input className={styles.egInput} placeholder='Score' type='string' value={score} onChange={handleScoreChange} />
-                    <input className={styles.egInput} placeholder='Ppponent' type='string' value={opponent} onChange={handleOpponentChange} />
+                    <input className={styles.egInput} placeholder='Opponent' type='string' value={opponent} onChange={handleOpponentChange} />
                     <input className={styles.egInput} placeholder='Location' type='string' value={location} onChange={handleLocationChange} />
                     <input className={styles.egInput} placeholder='Starting pitcher' type='string' value={startingPitcher} onChange={handleSPChange} />
                     <input className={styles.egInput} placeholder='Note' type='string' value={note} onChange={handleNoteChange} />
-                    <button id={styles.egBtn} >Edit game</button>
+                    <button id={styles.egBtn}>Edit game</button> 
                 </form>  
             </section>
         </> 

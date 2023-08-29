@@ -70,7 +70,8 @@
 #userTable{ 
     width: 1200px;   
     font-family: var(--slogan-font-family); 
-    /* border: 1px solid var(--darker-blue);  */
+    /* border: 1px solid var(--darker-blue);  */ 
+    margin: 10px; 
 }   
 
 th, td{
@@ -109,4 +110,27 @@ th, td{
 #deleteGameBtn:hover{
     background-color: var(--darker-red); 
     cursor: pointer; 
+} 
+
+.overlay{
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1; 
+    background-color: var(--darker-blue); 
+    opacity: .2; 
+} 
+
+#dot{
+    height: 80px; 
+    width: 80px; 
+    background-color: var(--main-red); 
+    border-radius: 50%; 
+    position: absolute; 
+    z-index: 2; 
+    top: 10px; 
+    left: 10px; 
+
 }
