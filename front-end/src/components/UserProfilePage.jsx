@@ -4,9 +4,12 @@ import styles from '/css-modules/UserProfilePage.module.css'
 
 const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
     const [games, setGames] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+
     const pageLoaded = useRef(false)
 
     useEffect(() => {
+        console.log('useEffect is running')
         if (!pageLoaded.current) {
             const getRequest = async () => {
                 try {
@@ -17,22 +20,34 @@ const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
                     }
                 } catch (error) {
                     console.log(error)
-                }
+                } 
+                setIsLoading(false) 
             }
             getRequest()
-
             console.log(games)
         }
         pageLoaded.current = true
     }, [])
 
+    // const addGame = game => {
+    //     setGames(prev => [game, ...prev]) 
+    // }    
+
+    const handleDelete = () => {
+        const deleteRequest = async () => {
+            
+        }
+    }
+
     return (
         <>
-            <div className={styles.overlay}> 
-            </div>
-                <div id={styles.dot}>
-
-                </div> 
+            {
+                isLoading &&
+                <div className={styles.overlay}>
+                    <div id={styles.dot}>
+                    </div>
+                </div>
+            }
             <Header />
             <section id={styles.profileContainer}>
                 <div id={styles.userInfo}>

@@ -3,7 +3,7 @@
   justify-content: center; 
   background-color: var(--powder-blue); 
   border-bottom: 4px solid var(--main-blue);  
-  /* outline: 4px solid blue;  */
+  /* outline: 4px solid var(--main-red);   */
   padding: 10px; 
 } 
 

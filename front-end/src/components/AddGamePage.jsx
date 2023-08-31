@@ -44,8 +44,9 @@ const AddGamePage = ({goToProfilePage}) => {
     const handleSubmit = e => {
         e.preventDefault() 
         try{
+            
             const postReq = async () => {
-                const response = await fetch('http://localhost:3000/user-games', {
+                const response = await fetch('http://localhost:3000/games', {
                     method: 'POST', 
                     headers: {'Content-Type': 'application/json'}, 
                     body: JSON.stringify({
@@ -54,17 +55,17 @@ const AddGamePage = ({goToProfilePage}) => {
                         score: score, 
                         opponent: opponent, 
                         location: location, 
-                        starting_pitcher: startingPitcher, 
+                        pitcher: startingPitcher, 
                         note: note
                     })
                 }) 
                 if (response.ok){
-                    const respToJson = await response.json() 
-                    console.log(respToJson) 
+                    // const respToJson = await response.json() 
+                    goToProfilePage() 
+                    // console.log(respToJson) 
                 }
             }
             postReq() 
-            goToProfilePage() 
         } catch(error){
             console.log(error) 
         }

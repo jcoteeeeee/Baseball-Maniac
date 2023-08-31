@@ -2,6 +2,7 @@ const express = require('express') // require is how you import
 const app = express() // express() creates an express object which is server itself
 const fs = require('fs') 
 const cors = require('cors')
+const { receiveMessageOnPort } = require('worker_threads')
 
 app.use(express.json()) 
 app.use(cors()) 
@@ -32,4 +33,17 @@ app.post('/games', (req, res) => {
     })
 }) 
 
-app.listen(3000, () => console.log('app is listening on', 3000))
+app.delete('/games/:id', (req, res) => {
+    fs.promises.readFile('./data/games.txt').then((games) => {
+        const gamesObj = JSON.parse(games)
+        const returnedGames = gamesObj.filter((game) => req.params.id !== game.id)
+        const gamesStr = JSON.stringify(returnedGames)  
+        fs.promises.writeFile('./data/games.txt', gamesStr)
+            .then(() => {
+                res.send('success')
+            })
+            .catch(error => console.log(error)) 
+    })
+})  
+
+app.listen(3000, () => console.log('app is listening on', 3000)) 
