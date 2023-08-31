@@ -121,16 +121,28 @@ th, td{
     z-index: 1; 
     background-color: var(--darker-blue); 
     opacity: .2; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 } 
+
+@keyframes fade-in{
+    from{
+        background-color: var(--main-blue); 
+    } 
+    to{
+        background-color: var(--main-red);
+    }
+}  
 
 #dot{
     height: 80px; 
     width: 80px; 
     background-color: var(--main-red); 
     border-radius: 50%; 
-    position: absolute; 
     z-index: 2; 
     top: 10px; 
     left: 10px; 
-
-}
+    animation-duration: 2s; 
+    animation-name: fade-in; 
+}     
