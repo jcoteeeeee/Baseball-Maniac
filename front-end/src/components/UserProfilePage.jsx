@@ -20,8 +20,8 @@ const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
                     }
                 } catch (error) {
                     console.log(error)
-                } 
-                setIsLoading(false) 
+                }
+                setIsLoading(false)
             }
             getRequest()
             console.log(games)
@@ -33,11 +33,18 @@ const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
     //     setGames(prev => [game, ...prev]) 
     // }    
 
-    const handleDelete = () => {
-        const deleteRequest = async () => {
-            
-        }
-    }
+    const handleDelete = async (game) => { 
+            console.log(game, games[0].id)
+            await fetch(`http://localhost:3000/games/${game}`, {
+                method: 'DELETE', 
+                headers: {'Content-Type': 'application/json'} 
+            })
+            .then(() => {setGames(games.filter(g => g.id !== game))}
+            )
+            .catch((error) => {
+            console.log(error) 
+        })
+    } 
 
     return (
         <>
@@ -82,7 +89,7 @@ const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
                         {
                             games.map(game => {
                                 return (
-                                    <tr key={game.id}>
+                                    <tr>
                                         <td>{game.date}</td>
                                         <td>{game.result}</td>
                                         <td>{game.score}</td>
@@ -92,7 +99,7 @@ const UserProfilePage = ({ goToAddGamePage, goToEditGamePage }) => {
                                         <td>{game.note}</td>
                                         <td>
                                             <button onClick={goToEditGamePage} id={styles.editGameBtn} >Edit Game</button>
-                                            <button id={styles.deleteGameBtn} >Delete Game</button>
+                                            <button onClick={() => { handleDelete(game.id) }} id={styles.deleteGameBtn} >Delete Game</button>
                                         </td>
                                     </tr>
                                 )

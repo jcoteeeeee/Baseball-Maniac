@@ -22,9 +22,12 @@ app.get('/games', (req, res) => {
 
 app.post('/games', (req, res) => {
     fs.promises.readFile('./data/games.txt').then((games) => {
-        const gamesObj = JSON.parse(games) 
-        gamesObj.push(req.body) 
-        const gamesStr = JSON.stringify(gamesObj) 
+        const gamesArr = JSON.parse(games) 
+        const gamesObj = req.body 
+        const id = Date.now() 
+        gamesObj.id = Math.floor(id / 100)   
+        gamesArr.push(gamesObj) 
+        const gamesStr = JSON.stringify(gamesArr) 
         fs.promises.writeFile('./data/games.txt', gamesStr)
             .then(() => {
                 res.send('success')
@@ -33,10 +36,25 @@ app.post('/games', (req, res) => {
     })
 }) 
 
+app.put('/games/:id', (req, res) => {
+    fs.promises.readFile('./data/games.txt').then((games) => {
+        const gamesArr = JSON.parse(games)
+        const gamesObj = req.body
+        gamesArr.push(gamesObj)
+        const gamesStr = JSON.stringify(gamesArr)
+        fs.promises.writeFile('./data/games.txt', gamesStr)
+            .then(() => {
+                res.send('success')
+            })
+            .catch(error => console.log(error))
+    })
+}) 
+
 app.delete('/games/:id', (req, res) => {
     fs.promises.readFile('./data/games.txt').then((games) => {
-        const gamesObj = JSON.parse(games)
-        const returnedGames = gamesObj.filter((game) => req.params.id !== game.id)
+        const gamesObj = JSON.parse(games) 
+        console.log(req.params.id, games[0].id)
+        const returnedGames = gamesObj.filter((game) => req.params.id != game.id)
         const gamesStr = JSON.stringify(returnedGames)  
         fs.promises.writeFile('./data/games.txt', gamesStr)
             .then(() => {
